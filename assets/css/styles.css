@@ -32,13 +32,13 @@ header {
     align-items: baseline;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: inherit;
 
 }
 
-h1{
+h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -51,7 +51,7 @@ h1{
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -67,8 +67,9 @@ nav {
     left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
-    display: none; 
-    top: 100%; /*ensure nav appears below header*/
+    display: none;
+    top: 100%;
+    /*ensure nav appears below header*/
 }
 
 /* Nav toggle */
@@ -77,19 +78,30 @@ nav {
 }
 
 #nav-toggle {
-    display: none; /*hide the check box*/
+    display: none;
+    /*hide the check box*/
 }
 
 .nav-toggle-label {
-    font-size: 2rem; /*adjusting size*/
+    font-size: 2rem;
+    /*adjusting size*/
 }
 
 /* Main content */
 main {
-    background-color: lightblue;
+
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    margin-top: 47px; /*pushing element down below header*/
+    margin-top: 47px;
+    /*pushing element down below header*/
+}
+
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%
+    /*center center to poisition horizontal and vertical*/
+    background: url("../images/hero-image.webp") no-repeat center center/cover; 
 }
 
 /* Footer */
@@ -98,34 +110,41 @@ main {
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
-    list-style-type: none; /*remove bullit points from list items*/
+    list-style-type: none;
+    /*remove bullit points from list items*/
 }
 
 #social-networks i {
     font-size: 160%;
     padding: 5%;
+    /*space around them*/
     color: #3a3a3a;
 }
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
-        display: block; /*block set to always display*/
-        position: relative;/*relative to display in navbar*/
+        display: block;
+        /*block set to always display*/
+        position: relative;
+        /*relative to display in navbar*/
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
     }
 
     #menu {
-        display: flex;/*setting to flex so they appear side by side instead of drop down view*/
+        display: flex;
+        /*setting to flex so they appear side by side instead of drop down view*/
     }
 
-    #menu > li {
-        padding-left: 1rem;/*adding space in the list ment*/
+    #menu>li {
+        padding-left: 1rem;
+        /*adding space in the list ment*/
     }
-    
+
     /*hide the label(no longer needed in larger screen*/
     .nav-toggle-label {
         display: none;
@@ -136,7 +155,9 @@ main {
         line-height: 75px;
         margin: 0 0.5rem;
 
-    } /* Main content */
+    }
+
+    /* Main content */
     main {
         /* Push main content down to accommodate larger header */
         margin-top: 79px;
@@ -145,7 +166,8 @@ main {
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
-        border-bottom: 1px solid #3a3a3a; /*puts underscore on menu when hovering*/
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+        /*puts underscore on menu when hovering*/
     }
 }
