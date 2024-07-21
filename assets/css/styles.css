@@ -27,6 +27,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a{
@@ -64,8 +67,21 @@ nav {
     left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
-    display: none;
-    
+    display: none; 
+    top: 100%; /*ensure nav appears below header*/
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none; /*hide the check box*/
+}
+
+.nav-toggle-label {
+    font-size: 2rem; /*adjusting size*/
 }
 
 /* Main content */
@@ -73,9 +89,36 @@ main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    margin-top: 47px; /*pushing element down below header*/
 }
 
 /* Footer */
 footer {
     background-color: orange;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block; /*block set to always display*/
+        position: relative;/*relative to display in navbar*/
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;/*setting to flex so they appear side by side instead of drop down view*/
+    }
+
+    #menu > li {
+        padding-left: 1rem;/*adding space in the list ment*/
+    }
+    
+    /*hide the label(no longer needed in larger screen*/
+    .nav-toggle-label {
+        display: none;
+    }
+
 }
